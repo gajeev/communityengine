@@ -432,6 +432,8 @@ class User < ActiveRecord::Base
     
     user.authorizing_from_omniauth = true
     
+    debugger
+    
     if user.save
       user.activate unless user.active?
       user.reset_persistence_token!
